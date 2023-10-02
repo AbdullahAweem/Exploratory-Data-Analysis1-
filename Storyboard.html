@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Global Terrorism 1970 to 2017</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Storyboard_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Storyboard_files/libs/quarto-html/quarto.js"></script>
+<script src="Storyboard_files/libs/quarto-html/popper.min.js"></script>
+<script src="Storyboard_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Storyboard_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Storyboard_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Storyboard_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Storyboard_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Storyboard_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Storyboard_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Global Terrorism 1970 to 2017</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+</section>
+<section id="running-code" class="level2">
+<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
+<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Importing Libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.3     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.3     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flexdashboard)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(highcharter)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(viridisLite)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Importing Data</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"globalterrorismdb_0718dist.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
+e.g.:
+  dat &lt;- vroom(...)
+  problems(dat)</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 181691 Columns: 135
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (55): approxdate, resolution, country_txt, region_txt, provstate, city, ...
+dbl (75): eventid, iyear, imonth, iday, extended, country, region, latitude,...
+lgl  (5): gsubname3, weaptype4, weaptype4_txt, weapsubtype4, weapsubtype4_txt
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Exploring Data Analysis</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>spc_tbl_ [181,691 × 135] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ eventid           : num [1:181691] 1.97e+11 1.97e+11 1.97e+11 1.97e+11 1.97e+11 ...
+ $ iyear             : num [1:181691] 1970 1970 1970 1970 1970 1970 1970 1970 1970 1970 ...
+ $ imonth            : num [1:181691] 7 0 1 1 1 1 1 1 1 1 ...
+ $ iday              : num [1:181691] 2 0 0 0 0 1 2 2 2 3 ...
+ $ approxdate        : chr [1:181691] NA NA NA NA ...
+ $ extended          : num [1:181691] 0 0 0 0 0 0 0 0 0 0 ...
+ $ resolution        : chr [1:181691] NA NA NA NA ...
+ $ country           : num [1:181691] 58 130 160 78 101 217 218 217 217 217 ...
+ $ country_txt       : chr [1:181691] "Dominican Republic" "Mexico" "Philippines" "Greece" ...
+ $ region            : num [1:181691] 2 1 5 8 4 1 3 1 1 1 ...
+ $ region_txt        : chr [1:181691] "Central America &amp; Caribbean" "North America" "Southeast Asia" "Western Europe" ...
+ $ provstate         : chr [1:181691] NA "Federal" "Tarlac" "Attica" ...
+ $ city              : chr [1:181691] "Santo Domingo" "Mexico city" "Unknown" "Athens" ...
+ $ latitude          : num [1:181691] 18.5 19.4 15.5 38 33.6 ...
+ $ longitude         : num [1:181691] -70 -99.1 120.6 23.8 130.4 ...
+ $ specificity       : num [1:181691] 1 1 4 1 1 1 1 1 1 1 ...
+ $ vicinity          : num [1:181691] 0 0 0 0 0 0 0 0 0 0 ...
+ $ location          : chr [1:181691] NA NA NA NA ...
+ $ summary           : chr [1:181691] NA NA NA NA ...
+ $ crit1             : num [1:181691] 1 1 1 1 1 1 1 1 1 1 ...
+ $ crit2             : num [1:181691] 1 1 1 1 1 1 1 1 1 1 ...
+ $ crit3             : num [1:181691] 1 1 1 1 1 1 1 1 1 1 ...
+ $ doubtterr         : num [1:181691] 0 0 0 0 -9 0 0 1 0 0 ...
+ $ alternative       : num [1:181691] NA NA NA NA NA NA NA 2 NA NA ...
+ $ alternative_txt   : chr [1:181691] NA NA NA NA ...
+ $ multiple          : num [1:181691] 0 0 0 0 0 0 0 0 0 0 ...
+ $ success           : num [1:181691] 1 1 1 1 1 1 0 1 1 1 ...
+ $ suicide           : num [1:181691] 0 0 0 0 0 0 0 0 0 0 ...
+ $ attacktype1       : num [1:181691] 1 6 1 3 7 2 1 3 7 7 ...
+ $ attacktype1_txt   : chr [1:181691] "Assassination" "Hostage Taking (Kidnapping)" "Assassination" "Bombing/Explosion" ...
+ $ attacktype2       : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ attacktype2_txt   : chr [1:181691] NA NA NA NA ...
+ $ attacktype3       : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ attacktype3_txt   : chr [1:181691] NA NA NA NA ...
+ $ targtype1         : num [1:181691] 14 7 10 7 7 3 3 21 4 2 ...
+ $ targtype1_txt     : chr [1:181691] "Private Citizens &amp; Property" "Government (Diplomatic)" "Journalists &amp; Media" "Government (Diplomatic)" ...
+ $ targsubtype1      : num [1:181691] 68 45 54 46 46 22 25 107 28 21 ...
+ $ targsubtype1_txt  : chr [1:181691] "Named Civilian" "Diplomatic Personnel (outside of embassy, consulate)" "Radio Journalist/Staff/Facility" "Embassy/Consulate" ...
+ $ corp1             : chr [1:181691] NA "Belgian Ambassador Daughter" "Voice of America" NA ...
+ $ target1           : chr [1:181691] "Julio Guzman" "Nadine Chaval, daughter" "Employee" "U.S. Embassy" ...
+ $ natlty1           : num [1:181691] 58 21 217 217 217 217 218 217 217 217 ...
+ $ natlty1_txt       : chr [1:181691] "Dominican Republic" "Belgium" "United States" "United States" ...
+ $ targtype2         : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ targtype2_txt     : chr [1:181691] NA NA NA NA ...
+ $ targsubtype2      : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ targsubtype2_txt  : chr [1:181691] NA NA NA NA ...
+ $ corp2             : chr [1:181691] NA NA NA NA ...
+ $ target2           : chr [1:181691] NA NA NA NA ...
+ $ natlty2           : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ natlty2_txt       : chr [1:181691] NA NA NA NA ...
+ $ targtype3         : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ targtype3_txt     : chr [1:181691] NA NA NA NA ...
+ $ targsubtype3      : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ targsubtype3_txt  : chr [1:181691] NA NA NA NA ...
+ $ corp3             : chr [1:181691] NA NA NA NA ...
+ $ target3           : chr [1:181691] NA NA NA NA ...
+ $ natlty3           : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ natlty3_txt       : chr [1:181691] NA NA NA NA ...
+ $ gname             : chr [1:181691] "MANO-D" "23rd of September Communist League" "Unknown" "Unknown" ...
+ $ gsubname          : chr [1:181691] NA NA NA NA ...
+ $ gname2            : chr [1:181691] NA NA NA NA ...
+ $ gsubname2         : chr [1:181691] NA NA NA NA ...
+ $ gname3            : chr [1:181691] NA NA NA NA ...
+ $ gsubname3         : logi [1:181691] NA NA NA NA NA NA ...
+ $ motive            : chr [1:181691] NA NA NA NA ...
+ $ guncertain1       : num [1:181691] 0 0 0 0 0 0 0 0 0 0 ...
+ $ guncertain2       : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ guncertain3       : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ individual        : num [1:181691] 0 0 0 0 0 0 0 0 0 0 ...
+ $ nperps            : num [1:181691] NA 7 NA NA NA -99 3 -99 1 1 ...
+ $ nperpcap          : num [1:181691] NA NA NA NA NA -99 NA -99 1 1 ...
+ $ claimed           : num [1:181691] NA NA NA NA NA 0 NA 0 1 0 ...
+ $ claimmode         : num [1:181691] NA NA NA NA NA NA NA NA 1 NA ...
+ $ claimmode_txt     : chr [1:181691] NA NA NA NA ...
+ $ claim2            : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ claimmode2        : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ claimmode2_txt    : chr [1:181691] NA NA NA NA ...
+ $ claim3            : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ claimmode3        : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ claimmode3_txt    : chr [1:181691] NA NA NA NA ...
+ $ compclaim         : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ weaptype1         : num [1:181691] 13 13 13 6 8 5 5 6 8 8 ...
+ $ weaptype1_txt     : chr [1:181691] "Unknown" "Unknown" "Unknown" "Explosives" ...
+ $ weapsubtype1      : num [1:181691] NA NA NA 16 NA 5 2 16 19 20 ...
+ $ weapsubtype1_txt  : chr [1:181691] NA NA NA "Unknown Explosive Type" ...
+ $ weaptype2         : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ weaptype2_txt     : chr [1:181691] NA NA NA NA ...
+ $ weapsubtype2      : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ weapsubtype2_txt  : chr [1:181691] NA NA NA NA ...
+ $ weaptype3         : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ weaptype3_txt     : chr [1:181691] NA NA NA NA ...
+ $ weapsubtype3      : num [1:181691] NA NA NA NA NA NA NA NA NA NA ...
+ $ weapsubtype3_txt  : chr [1:181691] NA NA NA NA ...
+ $ weaptype4         : logi [1:181691] NA NA NA NA NA NA ...
+ $ weaptype4_txt     : logi [1:181691] NA NA NA NA NA NA ...
+ $ weapsubtype4      : logi [1:181691] NA NA NA NA NA NA ...
+ $ weapsubtype4_txt  : logi [1:181691] NA NA NA NA NA NA ...
+ $ weapdetail        : chr [1:181691] NA NA NA "Explosive" ...
+ $ nkill             : num [1:181691] 1 0 1 NA NA 0 0 0 0 0 ...
+  [list output truncated]
+ - attr(*, "spec")=
+  .. cols(
+  ..   eventid = col_double(),
+  ..   iyear = col_double(),
+  ..   imonth = col_double(),
+  ..   iday = col_double(),
+  ..   approxdate = col_character(),
+  ..   extended = col_double(),
+  ..   resolution = col_character(),
+  ..   country = col_double(),
+  ..   country_txt = col_character(),
+  ..   region = col_double(),
+  ..   region_txt = col_character(),
+  ..   provstate = col_character(),
+  ..   city = col_character(),
+  ..   latitude = col_double(),
+  ..   longitude = col_double(),
+  ..   specificity = col_double(),
+  ..   vicinity = col_double(),
+  ..   location = col_character(),
+  ..   summary = col_character(),
+  ..   crit1 = col_double(),
+  ..   crit2 = col_double(),
+  ..   crit3 = col_double(),
+  ..   doubtterr = col_double(),
+  ..   alternative = col_double(),
+  ..   alternative_txt = col_character(),
+  ..   multiple = col_double(),
+  ..   success = col_double(),
+  ..   suicide = col_double(),
+  ..   attacktype1 = col_double(),
+  ..   attacktype1_txt = col_character(),
+  ..   attacktype2 = col_double(),
+  ..   attacktype2_txt = col_character(),
+  ..   attacktype3 = col_double(),
+  ..   attacktype3_txt = col_character(),
+  ..   targtype1 = col_double(),
+  ..   targtype1_txt = col_character(),
+  ..   targsubtype1 = col_double(),
+  ..   targsubtype1_txt = col_character(),
+  ..   corp1 = col_character(),
+  ..   target1 = col_character(),
+  ..   natlty1 = col_double(),
+  ..   natlty1_txt = col_character(),
+  ..   targtype2 = col_double(),
+  ..   targtype2_txt = col_character(),
+  ..   targsubtype2 = col_double(),
+  ..   targsubtype2_txt = col_character(),
+  ..   corp2 = col_character(),
+  ..   target2 = col_character(),
+  ..   natlty2 = col_double(),
+  ..   natlty2_txt = col_character(),
+  ..   targtype3 = col_double(),
+  ..   targtype3_txt = col_character(),
+  ..   targsubtype3 = col_double(),
+  ..   targsubtype3_txt = col_character(),
+  ..   corp3 = col_character(),
+  ..   target3 = col_character(),
+  ..   natlty3 = col_double(),
+  ..   natlty3_txt = col_character(),
+  ..   gname = col_character(),
+  ..   gsubname = col_character(),
+  ..   gname2 = col_character(),
+  ..   gsubname2 = col_character(),
+  ..   gname3 = col_character(),
+  ..   gsubname3 = col_logical(),
+  ..   motive = col_character(),
+  ..   guncertain1 = col_double(),
+  ..   guncertain2 = col_double(),
+  ..   guncertain3 = col_double(),
+  ..   individual = col_double(),
+  ..   nperps = col_double(),
+  ..   nperpcap = col_double(),
+  ..   claimed = col_double(),
+  ..   claimmode = col_double(),
+  ..   claimmode_txt = col_character(),
+  ..   claim2 = col_double(),
+  ..   claimmode2 = col_double(),
+  ..   claimmode2_txt = col_character(),
+  ..   claim3 = col_double(),
+  ..   claimmode3 = col_double(),
+  ..   claimmode3_txt = col_character(),
+  ..   compclaim = col_double(),
+  ..   weaptype1 = col_double(),
+  ..   weaptype1_txt = col_character(),
+  ..   weapsubtype1 = col_double(),
+  ..   weapsubtype1_txt = col_character(),
+  ..   weaptype2 = col_double(),
+  ..   weaptype2_txt = col_character(),
+  ..   weapsubtype2 = col_double(),
+  ..   weapsubtype2_txt = col_character(),
+  ..   weaptype3 = col_double(),
+  ..   weaptype3_txt = col_character(),
+  ..   weapsubtype3 = col_double(),
+  ..   weapsubtype3_txt = col_character(),
+  ..   weaptype4 = col_logical(),
+  ..   weaptype4_txt = col_logical(),
+  ..   weapsubtype4 = col_logical(),
+  ..   weapsubtype4_txt = col_logical(),
+  ..   weapdetail = col_character(),
+  ..   nkill = col_double(),
+  ..   nkillus = col_double(),
+  ..   nkillter = col_double(),
+  ..   nwound = col_double(),
+  ..   nwoundus = col_double(),
+  ..   nwoundte = col_double(),
+  ..   property = col_double(),
+  ..   propextent = col_double(),
+  ..   propextent_txt = col_character(),
+  ..   propvalue = col_double(),
+  ..   propcomment = col_character(),
+  ..   ishostkid = col_double(),
+  ..   nhostkid = col_double(),
+  ..   nhostkidus = col_double(),
+  ..   nhours = col_double(),
+  ..   ndays = col_double(),
+  ..   divert = col_character(),
+  ..   kidhijcountry = col_character(),
+  ..   ransom = col_double(),
+  ..   ransomamt = col_double(),
+  ..   ransomamtus = col_double(),
+  ..   ransompaid = col_double(),
+  ..   ransompaidus = col_double(),
+  ..   ransomnote = col_character(),
+  ..   hostkidoutcome = col_double(),
+  ..   hostkidoutcome_txt = col_character(),
+  ..   nreleased = col_double(),
+  ..   addnotes = col_character(),
+  ..   scite1 = col_character(),
+  ..   scite2 = col_character(),
+  ..   scite3 = col_character(),
+  ..   dbsource = col_character(),
+  ..   INT_LOG = col_double(),
+  ..   INT_IDEO = col_double(),
+  ..   INT_MISC = col_double(),
+  ..   INT_ANY = col_double(),
+  ..   related = col_character()
+  .. )
+ - attr(*, "problems")=&lt;externalptr&gt; </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    eventid              iyear          imonth            iday      
+ Min.   :1.970e+11   Min.   :1970   Min.   : 0.000   Min.   : 0.00  
+ 1st Qu.:1.991e+11   1st Qu.:1991   1st Qu.: 4.000   1st Qu.: 8.00  
+ Median :2.009e+11   Median :2009   Median : 6.000   Median :15.00  
+ Mean   :2.003e+11   Mean   :2003   Mean   : 6.467   Mean   :15.51  
+ 3rd Qu.:2.014e+11   3rd Qu.:2014   3rd Qu.: 9.000   3rd Qu.:23.00  
+ Max.   :2.017e+11   Max.   :2017   Max.   :12.000   Max.   :31.00  
+                                                                    
+  approxdate           extended        resolution           country    
+ Length:181691      Min.   :0.00000   Length:181691      Min.   :   4  
+ Class :character   1st Qu.:0.00000   Class :character   1st Qu.:  78  
+ Mode  :character   Median :0.00000   Mode  :character   Median :  98  
+                    Mean   :0.04535                      Mean   : 132  
+                    3rd Qu.:0.00000                      3rd Qu.: 160  
+                    Max.   :1.00000                      Max.   :1004  
+                                                                       
+ country_txt            region        region_txt         provstate        
+ Length:181691      Min.   : 1.000   Length:181691      Length:181691     
+ Class :character   1st Qu.: 5.000   Class :character   Class :character  
+ Mode  :character   Median : 6.000   Mode  :character   Mode  :character  
+                    Mean   : 7.161                                        
+                    3rd Qu.:10.000                                        
+                    Max.   :12.000                                        
+                                                                          
+     city              latitude        longitude          specificity   
+ Length:181691      Min.   :-53.16   Min.   :-86185896   Min.   :1.000  
+ Class :character   1st Qu.: 11.51   1st Qu.:        5   1st Qu.:1.000  
+ Mode  :character   Median : 31.47   Median :       43   Median :1.000  
+                    Mean   : 23.50   Mean   :     -459   Mean   :1.451  
+                    3rd Qu.: 34.69   3rd Qu.:       69   3rd Qu.:1.000  
+                    Max.   : 74.63   Max.   :      179   Max.   :5.000  
+                    NA's   :4556     NA's   :4557        NA's   :6      
+    vicinity         location           summary              crit1       
+ Min.   :-9.0000   Length:181691      Length:181691      Min.   :0.0000  
+ 1st Qu.: 0.0000   Class :character   Class :character   1st Qu.:1.0000  
+ Median : 0.0000   Mode  :character   Mode  :character   Median :1.0000  
+ Mean   : 0.0683                                         Mean   :0.9885  
+ 3rd Qu.: 0.0000                                         3rd Qu.:1.0000  
+ Max.   : 1.0000                                         Max.   :1.0000  
+                                                                         
+     crit2            crit3          doubtterr        alternative    
+ Min.   :0.0000   Min.   :0.0000   Min.   :-9.0000   Min.   :1.00    
+ 1st Qu.:1.0000   1st Qu.:1.0000   1st Qu.: 0.0000   1st Qu.:1.00    
+ Median :1.0000   Median :1.0000   Median : 0.0000   Median :1.00    
+ Mean   :0.9931   Mean   :0.8757   Mean   :-0.5232   Mean   :1.29    
+ 3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.: 0.0000   3rd Qu.:1.00    
+ Max.   :1.0000   Max.   :1.0000   Max.   : 1.0000   Max.   :5.00    
+                                   NA's   :1         NA's   :152680  
+ alternative_txt       multiple         success          suicide       
+ Length:181691      Min.   :0.0000   Min.   :0.0000   Min.   :0.00000  
+ Class :character   1st Qu.:0.0000   1st Qu.:1.0000   1st Qu.:0.00000  
+ Mode  :character   Median :0.0000   Median :1.0000   Median :0.00000  
+                    Mean   :0.1378   Mean   :0.8896   Mean   :0.03651  
+                    3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:0.00000  
+                    Max.   :1.0000   Max.   :1.0000   Max.   :1.00000  
+                    NA's   :1                                          
+  attacktype1    attacktype1_txt     attacktype2     attacktype2_txt   
+ Min.   :1.000   Length:181691      Min.   :1.00     Length:181691     
+ 1st Qu.:2.000   Class :character   1st Qu.:2.00     Class :character  
+ Median :3.000   Mode  :character   Median :2.00     Mode  :character  
+ Mean   :3.248                      Mean   :3.72                       
+ 3rd Qu.:3.000                      3rd Qu.:7.00                       
+ Max.   :9.000                      Max.   :9.00                       
+                                    NA's   :175377                     
+  attacktype3     attacktype3_txt      targtype1     targtype1_txt     
+ Min.   :1.00     Length:181691      Min.   : 1.00   Length:181691     
+ 1st Qu.:2.00     Class :character   1st Qu.: 3.00   Class :character  
+ Median :7.00     Mode  :character   Median : 4.00   Mode  :character  
+ Mean   :5.25                        Mean   : 8.44                     
+ 3rd Qu.:7.00                        3rd Qu.:14.00                     
+ Max.   :8.00                        Max.   :22.00                     
+ NA's   :181263                                                        
+  targsubtype1    targsubtype1_txt      corp1             target1         
+ Min.   :  1.00   Length:181691      Length:181691      Length:181691     
+ 1st Qu.: 22.00   Class :character   Class :character   Class :character  
+ Median : 35.00   Mode  :character   Mode  :character   Mode  :character  
+ Mean   : 46.97                                                           
+ 3rd Qu.: 74.00                                                           
+ Max.   :113.00                                                           
+ NA's   :10373                                                            
+    natlty1       natlty1_txt          targtype2      targtype2_txt     
+ Min.   :   4.0   Length:181691      Min.   : 1.00    Length:181691     
+ 1st Qu.:  83.0   Class :character   1st Qu.: 4.00    Class :character  
+ Median : 101.0   Mode  :character   Median :14.00    Mode  :character  
+ Mean   : 127.7                      Mean   :10.25                      
+ 3rd Qu.: 173.0                      3rd Qu.:14.00                      
+ Max.   :1004.0                      Max.   :22.00                      
+ NA's   :1559                        NA's   :170547                     
+  targsubtype2    targsubtype2_txt      corp2             target2         
+ Min.   :  1.00   Length:181691      Length:181691      Length:181691     
+ 1st Qu.: 34.00   Class :character   Class :character   Class :character  
+ Median : 67.00   Mode  :character   Mode  :character   Mode  :character  
+ Mean   : 55.31                                                           
+ 3rd Qu.: 69.00                                                           
+ Max.   :113.00                                                           
+ NA's   :171006                                                           
+    natlty2       natlty2_txt          targtype3      targtype3_txt     
+ Min.   :   4.0   Length:181691      Min.   : 1.00    Length:181691     
+ 1st Qu.:  92.0   Class :character   1st Qu.: 3.00    Class :character  
+ Median :  98.0   Mode  :character   Median :14.00    Mode  :character  
+ Mean   : 131.2                      Mean   :10.02                      
+ 3rd Qu.: 182.0                      3rd Qu.:14.00                      
+ Max.   :1004.0                      Max.   :22.00                      
+ NA's   :170863                      NA's   :180515                     
+  targsubtype3    targsubtype3_txt      corp3             target3         
+ Min.   :  1.00   Length:181691      Length:181691      Length:181691     
+ 1st Qu.: 33.00   Class :character   Class :character   Class :character  
+ Median : 67.00   Mode  :character   Mode  :character   Mode  :character  
+ Mean   : 55.55                                                           
+ 3rd Qu.: 73.00                                                           
+ Max.   :113.00                                                           
+ NA's   :180594                                                           
+    natlty3       natlty3_txt           gname             gsubname        
+ Min.   :   4.0   Length:181691      Length:181691      Length:181691     
+ 1st Qu.:  75.0   Class :character   Class :character   Class :character  
+ Median : 110.0   Mode  :character   Mode  :character   Mode  :character  
+ Mean   : 144.6                                                           
+ 3rd Qu.: 182.0                                                           
+ Max.   :1004.0                                                           
+ NA's   :180544                                                           
+    gname2           gsubname2            gname3          gsubname3     
+ Length:181691      Length:181691      Length:181691      Mode:logical  
+ Class :character   Class :character   Class :character   NA's:181691   
+ Mode  :character   Mode  :character   Mode  :character                 
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+    motive           guncertain1      guncertain2      guncertain3    
+ Length:181691      Min.   :0.0000   Min.   :0.00     Min.   :0.00    
+ Class :character   1st Qu.:0.0000   1st Qu.:0.00     1st Qu.:0.00    
+ Mode  :character   Median :0.0000   Median :0.00     Median :0.00    
+                    Mean   :0.0814   Mean   :0.27     Mean   :0.19    
+                    3rd Qu.:0.0000   3rd Qu.:1.00     3rd Qu.:0.00    
+                    Max.   :1.0000   Max.   :1.00     Max.   :1.00    
+                    NA's   :380      NA's   :179736   NA's   :181371  
+   individual          nperps            nperpcap         claimed     
+ Min.   :0.00000   Min.   :  -99.00   Min.   :-99.00   Min.   :-9.00  
+ 1st Qu.:0.00000   1st Qu.:  -99.00   1st Qu.:  0.00   1st Qu.: 0.00  
+ Median :0.00000   Median :  -99.00   Median :  0.00   Median : 0.00  
+ Mean   :0.00295   Mean   :  -65.36   Mean   : -1.52   Mean   : 0.05  
+ 3rd Qu.:0.00000   3rd Qu.:    1.00   3rd Qu.:  0.00   3rd Qu.: 0.00  
+ Max.   :1.00000   Max.   :25000.00   Max.   :406.00   Max.   : 1.00  
+                   NA's   :71115      NA's   :69489    NA's   :66120  
+   claimmode      claimmode_txt          claim2         claimmode2    
+ Min.   : 1.00    Length:181691      Min.   :-9.00    Min.   : 1.00   
+ 1st Qu.: 6.00    Class :character   1st Qu.: 0.00    1st Qu.: 6.00   
+ Median : 8.00    Mode  :character   Median : 0.00    Median : 7.00   
+ Mean   : 7.02                       Mean   : 0.25    Mean   : 7.18   
+ 3rd Qu.: 8.00                       3rd Qu.: 1.00    3rd Qu.:10.00   
+ Max.   :10.00                       Max.   : 1.00    Max.   :10.00   
+ NA's   :162608                      NA's   :179801   NA's   :181075  
+ claimmode2_txt         claim3         claimmode3     claimmode3_txt    
+ Length:181691      Min.   :0.00     Min.   : 1.00    Length:181691     
+ Class :character   1st Qu.:0.00     1st Qu.: 4.00    Class :character  
+ Mode  :character   Median :0.00     Median : 7.00    Mode  :character  
+                    Mean   :0.41     Mean   : 6.73                      
+                    3rd Qu.:1.00     3rd Qu.: 9.00                      
+                    Max.   :1.00     Max.   :10.00                      
+                    NA's   :181373   NA's   :181558                     
+   compclaim        weaptype1      weaptype1_txt       weapsubtype1  
+ Min.   :-9.0     Min.   : 1.000   Length:181691      Min.   : 1.00  
+ 1st Qu.:-9.0     1st Qu.: 5.000   Class :character   1st Qu.: 5.00  
+ Median :-9.0     Median : 6.000   Mode  :character   Median :12.00  
+ Mean   :-6.3     Mean   : 6.447                      Mean   :11.12  
+ 3rd Qu.: 0.0     3rd Qu.: 6.000                      3rd Qu.:16.00  
+ Max.   : 1.0     Max.   :13.000                      Max.   :31.00  
+ NA's   :176852                                       NA's   :20768  
+ weapsubtype1_txt     weaptype2      weaptype2_txt       weapsubtype2   
+ Length:181691      Min.   : 1.00    Length:181691      Min.   : 1.00   
+ Class :character   1st Qu.: 5.00    Class :character   1st Qu.: 5.00   
+ Mode  :character   Median : 6.00    Mode  :character   Median : 7.00   
+                    Mean   : 6.81                       Mean   :10.75   
+                    3rd Qu.: 8.00                       3rd Qu.:18.00   
+                    Max.   :13.00                       Max.   :31.00   
+                    NA's   :168564                      NA's   :170149  
+ weapsubtype2_txt     weaptype3      weaptype3_txt       weapsubtype3   
+ Length:181691      Min.   : 2.00    Length:181691      Min.   : 1.00   
+ Class :character   1st Qu.: 5.00    Class :character   1st Qu.: 4.00   
+ Mode  :character   Median : 6.00    Mode  :character   Median : 7.00   
+                    Mean   : 6.91                       Mean   :11.64   
+                    3rd Qu.: 9.00                       3rd Qu.:20.00   
+                    Max.   :13.00                       Max.   :28.00   
+                    NA's   :179828                      NA's   :179998  
+ weapsubtype3_txt   weaptype4      weaptype4_txt  weapsubtype4  
+ Length:181691      Mode:logical   Mode:logical   Mode:logical  
+ Class :character   NA's:181691    NA's:181691    NA's:181691   
+ Mode  :character                                               
+                                                                
+                                                                
+                                                                
+                                                                
+ weapsubtype4_txt  weapdetail            nkill             nkillus       
+ Mode:logical     Length:181691      Min.   :   0.000   Min.   :   0.00  
+ NA's:181691      Class :character   1st Qu.:   0.000   1st Qu.:   0.00  
+                  Mode  :character   Median :   0.000   Median :   0.00  
+                                     Mean   :   2.403   Mean   :   0.05  
+                                     3rd Qu.:   2.000   3rd Qu.:   0.00  
+                                     Max.   :1570.000   Max.   :1360.00  
+                                     NA's   :10313      NA's   :64446    
+    nkillter          nwound            nwoundus         nwoundte     
+ Min.   :  0.00   Min.   :   0.000   Min.   :  0.00   Min.   :  0.00  
+ 1st Qu.:  0.00   1st Qu.:   0.000   1st Qu.:  0.00   1st Qu.:  0.00  
+ Median :  0.00   Median :   0.000   Median :  0.00   Median :  0.00  
+ Mean   :  0.51   Mean   :   3.168   Mean   :  0.04   Mean   :  0.11  
+ 3rd Qu.:  0.00   3rd Qu.:   2.000   3rd Qu.:  0.00   3rd Qu.:  0.00  
+ Max.   :500.00   Max.   :8191.000   Max.   :751.00   Max.   :200.00  
+ NA's   :66958    NA's   :16311      NA's   :64702    NA's   :69143   
+    property         propextent     propextent_txt       propvalue         
+ Min.   :-9.0000   Min.   :1.0      Length:181691      Min.   :       -99  
+ 1st Qu.: 0.0000   1st Qu.:3.0      Class :character   1st Qu.:       -99  
+ Median : 1.0000   Median :3.0      Mode  :character   Median :       -99  
+ Mean   :-0.5446   Mean   :3.3                         Mean   :    208812  
+ 3rd Qu.: 1.0000   3rd Qu.:4.0                         3rd Qu.:      1000  
+ Max.   : 1.0000   Max.   :4.0                         Max.   :2700000000  
+                   NA's   :117626                      NA's   :142702      
+ propcomment          ishostkid           nhostkid          nhostkidus    
+ Length:181691      Min.   :-9.00000   Min.   :  -99.00   Min.   :-99.00  
+ Class :character   1st Qu.: 0.00000   1st Qu.:    1.00   1st Qu.:  0.00  
+ Mode  :character   Median : 0.00000   Median :    2.00   Median :  0.00  
+                    Mean   : 0.05905   Mean   :    4.53   Mean   : -0.35  
+                    3rd Qu.: 0.00000   3rd Qu.:    4.00   3rd Qu.:  0.00  
+                    Max.   : 1.00000   Max.   :17000.00   Max.   : 86.00  
+                    NA's   :178        NA's   :168119     NA's   :168174  
+     nhours           ndays            divert          kidhijcountry     
+ Min.   :-99.00   Min.   : -99.00   Length:181691      Length:181691     
+ 1st Qu.:-99.00   1st Qu.: -99.00   Class :character   Class :character  
+ Median :-99.00   Median : -99.00   Mode  :character   Mode  :character  
+ Mean   :-46.79   Mean   : -32.52                                        
+ 3rd Qu.:  0.00   3rd Qu.:   4.00                                        
+ Max.   :999.00   Max.   :2454.00                                        
+ NA's   :177628   NA's   :173567                                         
+     ransom         ransomamt           ransomamtus          ransompaid       
+ Min.   :-9.00    Min.   :       -99   Min.   :      -99   Min.   :      -99  
+ 1st Qu.: 0.00    1st Qu.:         0   1st Qu.:        0   1st Qu.:      -99  
+ Median : 0.00    Median :     15000   Median :        0   Median :        0  
+ Mean   :-0.15    Mean   :   3172530   Mean   :   578487   Mean   :   717944  
+ 3rd Qu.: 0.00    3rd Qu.:    400000   3rd Qu.:        0   3rd Qu.:     1273  
+ Max.   : 1.00    Max.   :1000000000   Max.   :132000000   Max.   :275000000  
+ NA's   :104310   NA's   :180341       NA's   :181128      NA's   :180917     
+  ransompaidus      ransomnote        hostkidoutcome   hostkidoutcome_txt
+ Min.   :  -99.0   Length:181691      Min.   :1.00     Length:181691     
+ 1st Qu.:    0.0   Class :character   1st Qu.:2.00     Class :character  
+ Median :    0.0   Mode  :character   Median :4.00     Mode  :character  
+ Mean   :  240.4                      Mean   :4.63                       
+ 3rd Qu.:    0.0                      3rd Qu.:7.00                       
+ Max.   :48000.0                      Max.   :7.00                       
+ NA's   :181139                       NA's   :170700                     
+   nreleased         addnotes            scite1             scite2         
+ Min.   : -99.00   Length:181691      Length:181691      Length:181691     
+ 1st Qu.: -99.00   Class :character   Class :character   Class :character  
+ Median :   0.00   Mode  :character   Mode  :character   Mode  :character  
+ Mean   : -29.02                                                           
+ 3rd Qu.:   1.00                                                           
+ Max.   :2769.00                                                           
+ NA's   :171291                                                            
+    scite3            dbsource            INT_LOG          INT_IDEO     
+ Length:181691      Length:181691      Min.   :-9.000   Min.   :-9.000  
+ Class :character   Class :character   1st Qu.:-9.000   1st Qu.:-9.000  
+ Mode  :character   Mode  :character   Median :-9.000   Median :-9.000  
+                                       Mean   :-4.544   Mean   :-4.464  
+                                       3rd Qu.: 0.000   3rd Qu.: 0.000  
+                                       Max.   : 1.000   Max.   : 1.000  
+                                                                        
+    INT_MISC           INT_ANY         related         
+ Min.   :-9.00000   Min.   :-9.000   Length:181691     
+ 1st Qu.: 0.00000   1st Qu.:-9.000   Class :character  
+ Median : 0.00000   Median : 0.000   Mode  :character  
+ Mean   : 0.09001   Mean   :-3.946                     
+ 3rd Qu.: 0.00000   3rd Qu.: 0.000                     
+ Max.   : 1.00000   Max.   : 1.000                     
+                                                       </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(data))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           eventid              iyear             imonth               iday 
+                 0                  0                  0                  0 
+        approxdate           extended         resolution            country 
+            172452                  0             179471                  0 
+       country_txt             region         region_txt          provstate 
+                 0                  0                  0                421 
+              city           latitude          longitude        specificity 
+               434               4556               4557                  6 
+          vicinity           location            summary              crit1 
+                 0             126196              66129                  0 
+             crit2              crit3          doubtterr        alternative 
+                 0                  0                  1             152680 
+   alternative_txt           multiple            success            suicide 
+            152680                  1                  0                  0 
+       attacktype1    attacktype1_txt        attacktype2    attacktype2_txt 
+                 0                  0             175377             175377 
+       attacktype3    attacktype3_txt          targtype1      targtype1_txt 
+            181263             181263                  0                  0 
+      targsubtype1   targsubtype1_txt              corp1            target1 
+             10373              10373              42546                634 
+           natlty1        natlty1_txt          targtype2      targtype2_txt 
+              1559               1559             170547             170547 
+      targsubtype2   targsubtype2_txt              corp2            target2 
+            171006             171006             171574             170671 
+           natlty2        natlty2_txt          targtype3      targtype3_txt 
+            170863             170863             180515             180515 
+      targsubtype3   targsubtype3_txt              corp3            target3 
+            180594             180594             180665             180516 
+           natlty3        natlty3_txt              gname           gsubname 
+            180544             180544                  0             175801 
+            gname2          gsubname2             gname3          gsubname3 
+            179678             181531             181367             181691 
+            motive        guncertain1        guncertain2        guncertain3 
+            131130                380             179736             181371 
+        individual             nperps           nperpcap            claimed 
+                 0              71115              69489              66120 
+         claimmode      claimmode_txt             claim2         claimmode2 
+            162608             162608             179801             181075 
+    claimmode2_txt             claim3         claimmode3     claimmode3_txt 
+            181075             181373             181558             181558 
+         compclaim          weaptype1      weaptype1_txt       weapsubtype1 
+            176852                  0                  0              20768 
+  weapsubtype1_txt          weaptype2      weaptype2_txt       weapsubtype2 
+             20768             168564             168564             170149 
+  weapsubtype2_txt          weaptype3      weaptype3_txt       weapsubtype3 
+            170149             179828             179828             179998 
+  weapsubtype3_txt          weaptype4      weaptype4_txt       weapsubtype4 
+            179998             181691             181691             181691 
+  weapsubtype4_txt         weapdetail              nkill            nkillus 
+            181691              67670              10313              64446 
+          nkillter             nwound           nwoundus           nwoundte 
+             66958              16311              64702              69143 
+          property         propextent     propextent_txt          propvalue 
+                 0             117626             117626             142702 
+       propcomment          ishostkid           nhostkid         nhostkidus 
+            123732                178             168119             168174 
+            nhours              ndays             divert      kidhijcountry 
+            177628             173567             181367             178386 
+            ransom          ransomamt        ransomamtus         ransompaid 
+            104310             180341             181128             180917 
+      ransompaidus         ransomnote     hostkidoutcome hostkidoutcome_txt 
+            181139             181177             170700             170700 
+         nreleased           addnotes             scite1             scite2 
+            171291             153402              66191             104758 
+            scite3           dbsource            INT_LOG           INT_IDEO 
+            138175                  0                  0                  0 
+          INT_MISC            INT_ANY            related 
+                 0                  0             156653 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>terrorism_data <span class="ot">&lt;-</span> data[, <span class="fu">c</span>(<span class="st">"iyear"</span>, <span class="st">"imonth"</span>, <span class="st">"iday"</span>, <span class="st">"country_txt"</span>, <span class="st">"region_txt"</span>, <span class="st">"latitude"</span>, <span class="st">"longitude"</span>, <span class="st">"attacktype1_txt"</span>, <span class="st">"targtype1_txt"</span>, <span class="st">"gname"</span>, <span class="st">"nkill"</span>, <span class="st">"nwound"</span>)]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Handling missing values</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>terrorism_data[<span class="fu">is.na</span>(terrorism_data)] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>hot_zones <span class="ot">&lt;-</span> terrorism_data <span class="sc">%&gt;%</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country_txt) <span class="sc">%&gt;%</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total_attacks =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_attacks))</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print hot zones</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(hot_zones)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 205 × 2
+   country_txt    total_attacks
+   &lt;chr&gt;                  &lt;int&gt;
+ 1 Iraq                   24636
+ 2 Pakistan               14368
+ 3 Afghanistan            12731
+ 4 India                  11960
+ 5 Colombia                8306
+ 6 Philippines             6908
+ 7 Peru                    6096
+ 8 El Salvador             5320
+ 9 United Kingdom          5235
+10 Turkey                  4292
+# ℹ 195 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(hot_zones, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(country_txt, total_attacks), <span class="at">y =</span> total_attacks)) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Country"</span>) <span class="sc">+</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Total Attacks"</span>) <span class="sc">+</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Storyboard_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(terrorism_data, <span class="fu">aes</span>(<span class="at">x =</span> region_txt)) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Storyboard_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize attack types</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(terrorism_data, <span class="fu">aes</span>(<span class="at">x =</span> attacktype1_txt)) <span class="sc">+</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Storyboard_files/figure-html/unnamed-chunk-1-3.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>You can add options to executable code like this</p>
+<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
